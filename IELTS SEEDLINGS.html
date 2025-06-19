@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IELTS SEEDLINGS - READING 1 HOMEWORK</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('my-background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      overflow-x: hidden;
+    }
+    .page {
+      min-height: 100vh;
+      padding: 1rem;
+      box-sizing: border-box;
+      display: flex;
+      gap: 1rem;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0rem;
+    }
+    .scroll-pane, .question-box {
+      flex: 1;
+      height: 500px;
+      overflow-y: auto;
+      background: #fff;
+      padding: 1rem;
+      border: 1px solid #ccc;
+    }
+    .question {
+      margin-bottom: 1.5rem;
+    }
+    .progress {
+      margin-top: 1rem;
+      font-weight: bold;
+     }
+    #toolbar {
+      position: absolute;
+      background: #f0f0f0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      display: none;
+      z-index: 1000;
+      width: 210px;
+      height: auto;
+      box-sizing: border-box;
+    }
+    .highlight {
+      background-color: yellow;
+    }
+    .note-box {
+      position: absolute;
+      background: yellow;
+      border: 1px solid #ccc;
+      padding: 5px;
+      z-index: 1001;
+    }
+    .note-box textarea {
+      width: 200px;
+      height: 60px;
+    }
+    .note-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5px;
+    }
+    .note-icon {
+      position: absolute;
+      background: yellow;
+      border: 1px solid #ccc;
+      width: 16px;
+      height: 16px;
+      cursor: move;
+      z-index: 1000;
+       }
+    .nav-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #000000;
+      color: white;
+      padding: 0rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 999;
+    }
+    .nav-section {
+      display: flex;
+      align-items: center;
+    }
+    .nav-label {
+      margin-right: 0.5rem;
+      margin-left: 1rem;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    .question-btn {
+      width: 25px;
+      height: 25px;
+      margin: 0 2px;
+      text-align: center;
+      line-height: 25px;
+      background-color: gray;
+      color: white;
+      font-weight: bold;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .question-btn.answered {
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div id="toolbar">
+    <button onclick="applyHighlight()">Highlight</button>
+    <button onclick="addNote()">Note</button>
+    <button onclick="clearAll()">Clear All</button>
+  </div>
+  <h1 style="padding-left: 2rem;">IELTS SEEDLINGS - READING 1 HOMEWORK</h1>
+<div style="display: flex; gap: 1rem; padding: 1rem 2rem;">
+  <input type="text" id="studentName" placeholder="Student Name" required style="padding: 0.4rem; width: 200px;" />
+  <input type="text" id="classCode" placeholder="Class Code" required style="padding: 0.4rem; width: 200px;" />
+</div>
+
+    <div class="page" id="passage1">
+    <div class="scroll-pane" id="scrollText">
+      <h2>Passage 1</h2>
+            <strong>CHANGES IN FAMILY STRUCTURE</strong>
+            <p>There are many types of family systems around the world. In North America and northern Europe, the nuclear family (with two generations - a father, mother and one or more children) is often seen as the most typical. In contrast, in most other parts of the world, extended families, which include other family members such as grandparents, aunts, uncles and cousins, are seen as the norm.</p>
+            <p>The common view is that the nuclear family has become the norm in many Western societies as a result of industrialization and urbanization. This trend began in the late eighteenth and nineteenth centuries, when people were forced to move to cities to find work in the factories that sprang up during the Industrial Revolution. In the twentieth century, greater industrialization resulted in even more people leaving their large extended families. Urbanization also meant that people lived in much smaller houses, which were not big enough for an extended family.</p>      
+            <p>The trend towards nuclear families meant that many of the duties and responsibilities of a family, such as providing food and shelter, cleaning the home, preparing the food, caring for children and their education, and caring for the sick and elderly are no longer shared among the members of the extended family. The parents (or parent) now have to do this, with some help from the state. However, this is the price that people pay for the higher standard of living that may come from living in a city.</p>
+            <p>We may think we know what we mean by a 'nuclear' family and an 'extended' family, but reality is more complicated than most people believe. Most nuclear families are part of extended families: children have grandparents and in many cases, aunts, uncles and cousins as well. Part of what makes them 'nuclear' is that they live in their own separate household, but it is not the whole story. In Greece or Italy, for example, a nuclear family may live in its own flat, but the extended family may live in the same apartment block or in the same street and family members see each other and even eat together every day.</p>
+            <p>There is at least one more factor to consider. Family members may be separated from each other by geographical distance, but they may have close emotional ties. Even in North America and northern Europe, grandparents usually have close bonds with their grandchildren, and families often travel long distances so that they can see each other. Grandparents often help their adult children, for example, by cooking and looking after their children in emergencies. In the same way, when their parents become too old to live on their own, adult children may take them into their own homes. As a result, they turn their nuclear family into an extended family.</p>
+            <p>The structure of families changes over time. The effects of urbanization and industrialization are enormous, but they are not the only reasons for the changes. People marry, have children, become widowed, divorce and die. Children grow up and adults grow old. Nuclear families become extended 
+families and extended families become nuclear families. Family ties stay strong or become weak. One thing is certain: in a changing world, the family will continue to change, but ultimately, it is likely to continue to be the basic unit of society. 
+</p>
+          </div>
+    <div class="question-box">
+      <div class="question"> <b>Question 1-6</b>
+        <p>Choose <strong>TRUE</strong> if the text confirms the statement, choose
+        <strong>FALSE</strong> if the text contradicts the statement, or choose 
+        <strong>NOT GIVEN</strong> if it is impossible to know from the text
+</p>
+        <label for="q1"><strong>1.</strong> The nuclear family is seen as the most common in the USA.</label><br>
+        <select id="q1" onchange="updateProgress()">
+          <option value="">----</option>
+          <option value="True">True</option>
+          <option value="False">False</option>
+        </select>
+      </div>
+      <div class="question">
+        <label for="q2"><strong>2.</strong> Nuclear families started with the rise in industrialization.</label><br>
+        <select id="q2" onchange="updateProgress()">
+          <option value="">----</option>
+          <option value="True">True</option>
+          <option value="False">False</option>
+        </select>
+      </div>
+      <div class="question">
+        <label for="q3"><strong>3.</strong> In nuclear families, people have a higher standard of living.</label><br>
+        <select id="q3" onchange="updateProgress()">
+          <option value="">--Select--</option>
+          <option value="True">True</option>
+          <option value="False">False</option>
+        </select>
+      </div>
+      <div class="question">
+        <label for="q4"><strong>4.</strong> Nuclear families are isolated from their extended family.</label><br>
+        <select id="q4" onchange="updateProgress()">
+          <option value="">--Select--</option>
+          <option value="True">True</option>
+          <option value="False">False</option>
+        </select>
+      </div>
+      <div class="question">
+        <label for="q5"><strong>5.</strong> Members of extended families often look after people who live in other households.</label><br>
+        <select id="q5" onchange="updateProgress()">
+          <option value="">--Select--</option>
+          <option value="True">True</option>
+          <option value="False">False</option>
+        </select>
+      </div>
+      <div class="question">
+        <label for="q6"><strong>6.</strong> Changes tofamily structure will become increasingly fast in the future.</label><br>
+        <select id="q6" onchange="updateProgress()">
+          <option value="">--Select--</option>
+          <option value="True">True</option>
+          <option value="False">False</option>
+          <option value="Not Given">Not Given</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="page" id="passage2">
+    <div class="scroll-pane" id="scrollText2">
+      <h2>Passage 2</h2>
+      <strong>THE MEANING OF CHILDHOOD</strong>
+      <p>What do we mean by a 'normal' childhood? It really depends on the period when a person was born and where they live. If you asked a parent in Britain today, they would probably say that childhood should be the happiest time of a person's life: a time when the child is loved, kept safe and is free to play.</p>
+      <p>However, even within the same culture, ideas about childhood have changed dramatically within a short period of time. British children growing up in the 1960s or 1970s seem to have had more freedom than children in the early twenty-first century. They were allowed to go about more freely, walking to school or to visit their friends, or using public transport. They were also more likely to be asked to do things like clean floors and wash the dishes and to look after younger brothers and sisters.</p>
+      <p>Today, parents are far more protective. They worry more about the dangers their children might face, and some parents also involve themselves excessively with their child's experiences and problems. These are the 'helicopter' parents. They are called this because, like helicopters, they continually hover over their child's head.</p>
+      <p>Childhood also ends later than it used to. At the beginning of the twentieth century, a twelve-year-old girl might have been sent off to work in a factory or as a maid for a wealthy family. She would have earned money and sent some of it back to her family. Twelve-year-old boys often become apprentices and learnt a trade, and in the countryside children worked in the fields and looked after animals almost as soon as they could walk.</p>
+      <p>The further back we go in history, the more difficult it is to have an accurate picture of attitudes to childhood. We know very little, for example, about the attitudes of mothers in eighteenth-century Britain. For example, what sort of mother could send her son, still a child, to join the Royal Navy, where he could expect a tough life, bad food and constant danger? Was she indifferent, cruel, or did she simply have no choice? And yet, boys as young as ten were sent away to sea. And it wasn't only the sons of the poor; wealthy families sent their sons, some as young as eight, to join the navy. Incredibly, they were put in charge of men who had many years of experience at sea.</p>
+      <p>So how have things changed? In some societies people are having fewer children. Does this fact alone mean that children are more precious to their parents and that therefore they have more of a 'normal' childhood? There is a concern that in a family with an only child, the parents and grandparents give the child a huge amount of attention and spoil them by buying them anything the child wants. The result of this is that the child expects their parents to do anything they tell them to, which creates problems for the child as they start to grow up.</p><p></p><p></p><br><br>
+    </div>
+    <div class="question-box">
+<div class="question"><b>Question 1-8</b>
+        <p>Choose <strong>TRUE</strong> if the text confirms the statement, choose
+        <strong>FALSE</strong> if the text contradicts the statement, or choose 
+        <strong>NOT GIVEN</strong> if it is impossible to know from the text
+</p>
+        <label for="a"><strong>1.</strong> Sixty years ago, children were expected to help around the house.</label><br>
+        <select id="a" onchange="updateProgress()">
+          <option value="">--Select--</option>
+          <option value="True">True</option>
+          <option value="False">False</option>
+          <option value="Not Given">Not Given</option>
+        </select>
+      </div>
+      <div class="question">
+        <label for="b"><strong>2.</strong> Today the world is a more dangerous place.</label><br>
+        <select id="b" onchange="updateProgress()">
+          <option value="">--Select--</option>
+          <option value="True">True</option>
+          <option value="False">False</option>
+          <option value="Not Given">Not Given</option>
+        </select>
+      </div>
+      <div class="question">
+        <label for="c"><strong>3.</strong> Helicopter parents love their children more than other parents.</label><br>
+        <select id="c" onchange="updateProgress()">
+          <option value="">--Select--</option>
+          <option value="True">True</option>
+          <option value="False">False</option>
+          <option value="Not Given">Not Given</option>
+        </select>
+      </div>
+      <div class="question">
+        <label for="d"><strong>4.</strong> People today have shorter childhoods than children in the past.</label><br>
+        <select id="d" onchange="updateProgress()">
+          <option value="">--Select--</option>
+          <option value="True">True</option>
+          <option value="False">False</option>
+          <option value="Not Given">Not Given</option>
+        </select>
+      </div>
+      <div class="question">
+        <label for="e"><strong>5.</strong> In the past children who lived in the country worked out of doors.</label><br>
+        <select id="e" onchange="updateProgress()">
+          <option value="">--Select--</option>
+          <option value="True">True</option>
+          <option value="False">False</option>
+          <option value="Not Given">Not Given</option>
+        </select>
+      </div>
+      <div class="question">
+        <label for="f"><strong>6.</strong> Eighteenth-century mothers were cruel or indifferent to their children.</label><br>
+        <select id="f" onchange="updateProgress()">
+          <option value="">--Select--</option>
+          <option value="True">True</option>
+          <option value="False">False</option>
+          <option value="Not Given">Not Given</option>
+        </select>
+      </div>
+      <div class="question">
+        <label for="g"><strong>7.</strong> Children serving in the Royal Navy in the eighteenth century might find themselves in charge of adults.</label><br>
+        <select id="g" onchange="updateProgress()">
+          <option value="">--Select--</option>
+          <option value="True">True</option>
+          <option value="False">False</option>
+          <option value="Not Given">Not Given</option>
+        </select>
+      </div>
+      <div class="question">
+        <label for="h"><strong>8.</strong> Modern Western ideas about childhood are probably considered unusual in other cultures.</label><br>
+        <select id="h" onchange="updateProgress()">
+          <option value="">--Select--</option>
+          <option value="True">True</option>
+          <option value="False">False</option>
+          <option value="Not Given">Not Given</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+  <br><br><br>
+  <div class="nav-bar">
+    <div class="nav-section">
+      <span class="nav-label">PASSAGE 1:</span>
+      <div class="question-btn" onclick="goToQuestion('q1')" id="btn-q1">1</div>
+      <div class="question-btn" onclick="goToQuestion('q2')" id="btn-q2">2</div>
+      <div class="question-btn" onclick="goToQuestion('q3')" id="btn-q3">3</div>
+      <div class="question-btn" onclick="goToQuestion('q4')" id="btn-q4">4</div>
+      <div class="question-btn" onclick="goToQuestion('q5')" id="btn-q5">5</div>
+      <div class="question-btn" onclick="goToQuestion('q6')" id="btn-q6">6</div>
+      <span class="nav-label">PASSAGE 2:</span>
+      <div class="question-btn" onclick="goToQuestion('a')" id="btn-a">1</div>
+      <div class="question-btn" onclick="goToQuestion('b')" id="btn-b">2</div>
+      <div class="question-btn" onclick="goToQuestion('c')" id="btn-c">3</div>
+      <div class="question-btn" onclick="goToQuestion('d')" id="btn-d">4</div>
+      <div class="question-btn" onclick="goToQuestion('e')" id="btn-e">5</div>
+      <div class="question-btn" onclick="goToQuestion('f')" id="btn-f">6</div>
+      <div class="question-btn" onclick="goToQuestion('g')" id="btn-g">7</div>
+      <div class="question-btn" onclick="goToQuestion('h')" id="btn-h">8</div>
+    </div>
+    <div style="text-align:center; margin-top:1rem;">
+  <button onclick="submitToSheet()">Submit</button>
+  <div id="score" style="margin-bottom:1rem; font-size:1.6rem; font-weight:bold;"></div>
+</div>
+    <script>
+    function highlightWord(span) {
+      span.classList.toggle('highlight');
+    }
+    function updateProgress() {
+      let answered = 0;
+  const total = 14;
+
+  const ids = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+  ids.forEach(id => {
+    const value = document.getElementById(id).value;
+    if (value) {
+      answered++;
+      document.getElementById('btn-' + id).classList.add('answered');
+    } else {
+      document.getElementById('btn-' + id).classList.remove('answered');
+    }
+  });
+            if (document.getElementById('q1').value) answered++;
+      if (document.getElementById('q2').value) answered++;
+      if (document.getElementById('q3').value) answered++;
+      if (document.getElementById('q4').value) answered++;
+      if (document.getElementById('q5').value) answered++;
+      if (document.getElementById('q6').value) answered++;
+      if (document.getElementById('a').value) answered++;
+      if (document.getElementById('b').value) answered++;
+      if (document.getElementById('c').value) answered++;
+      if (document.getElementById('d').value) answered++;
+      if (document.getElementById('e').value) answered++;
+      if (document.getElementById('f').value) answered++;
+      if (document.getElementById('g').value) answered++;
+      if (document.getElementById('h').value) answered++;
+      document.getElementById('progress').textContent = `Progress: ${answered}/${total} answered`;
+      document.getElementById('btn-q1').classList.toggle('answered', document.getElementById('q1').value);
+      document.getElementById('btn-q2').classList.toggle('answered', document.getElementById('q2').value);
+      document.getElementById('btn-q3').classList.toggle('answered', document.getElementById('q3').value);
+      document.getElementById('btn-q4').classList.toggle('answered', document.getElementById('q4').value);
+      document.getElementById('btn-q5').classList.toggle('answered', document.getElementById('q5').value);
+      document.getElementById('btn-q6').classList.toggle('answered', document.getElementById('q6').value);
+      document.getElementById('btn-a').classList.toggle('answered', document.getElementById('a').value);
+      document.getElementById('btn-b').classList.toggle('answered', document.getElementById('b').value);
+      document.getElementById('btn-c').classList.toggle('answered', document.getElementById('c').value);
+      document.getElementById('btn-d').classList.toggle('answered', document.getElementById('d').value);
+      document.getElementById('btn-e').classList.toggle('answered', document.getElementById('e').value);
+      document.getElementById('btn-f').classList.toggle('answered', document.getElementById('f').value);
+      document.getElementById('btn-g').classList.toggle('answered', document.getElementById('g').value);
+      document.getElementById('btn-h').classList.toggle('answered', document.getElementById('h').value);
+      
+    }
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      if (!ev.target.contains(document.getElementById(data))) {
+        ev.target.appendChild(document.getElementById(data));
+        updateProgress();
+      }
+    }
+    function goToQuestion(id) {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  </script>
+  <script>
+    let selectionRange = null;
+
+    document.addEventListener("mouseup", (e) => {
+      const selection = window.getSelection();
+      if (!selection.isCollapsed) {
+        selectionRange = selection.getRangeAt(0);
+        const rect = selectionRange.getBoundingClientRect();
+        const toolbar = document.getElementById("toolbar");
+        toolbar.style.display = 'block';
+        toolbar.style.top = `${window.scrollY + rect.top - 40}px`;
+        toolbar.style.left = `${window.scrollX + rect.left}px`;
+      } else {
+        document.getElementById("toolbar").style.display = 'none';
+      }
+    });
+
+    function applyHighlight() {
+      if (!selectionRange) return;
+      const span = document.createElement("span");
+      span.className = "highlight";
+      span.textContent = selectionRange.toString();
+
+      if (selectionRange.startContainer.parentNode.className === "highlight") {
+        const parent = selectionRange.startContainer.parentNode;
+        const textNode = document.createTextNode(parent.textContent);
+        parent.replaceWith(textNode);
+      } else {
+        selectionRange.deleteContents();
+        selectionRange.insertNode(span);
+      }
+
+      window.getSelection().removeAllRanges();
+      document.getElementById("toolbar").style.display = 'none';
+    }
+
+    function addNote() {
+      if (!selectionRange) return;
+      const rect = selectionRange.getBoundingClientRect();
+      const x = window.scrollX + rect.left;
+      const y = window.scrollY + rect.bottom;
+
+      const noteBox = document.createElement("div");
+      noteBox.className = "note-box";
+      noteBox.style.left = `${x}px`;
+      noteBox.style.top = `${y}px`;
+
+      const textArea = document.createElement("textarea");
+      noteBox.appendChild(textArea);
+
+      const btns = document.createElement("div");
+      btns.className = "note-buttons";
+      btns.innerHTML = `
+        <button onclick="this.closest('.note-box').remove()">Delete</button>
+        <button onclick="navigator.clipboard.writeText(this.closest('.note-box').querySelector('textarea').value)">Copy</button>
+        <button onclick="this.closest('.note-box').querySelector('textarea').select(); document.execCommand('paste')">Paste</button>
+      `;
+
+      noteBox.appendChild(btns);
+      document.body.appendChild(noteBox);
+      document.getElementById("toolbar").style.display = 'none';
+      window.getSelection().removeAllRanges();
+
+      // Add hiding and showing logic
+      const icon = document.createElement("div");
+      icon.className = "note-icon";
+      icon.style.left = `${x}px`;
+      icon.style.top = `${y}px`;
+      icon.style.display = 'none';
+      document.body.appendChild(icon);
+
+      function hideNote() {
+        noteBox.style.display = 'none';
+        icon.style.display = 'block';
+      }
+
+      function showNote() {
+        noteBox.style.display = 'block';
+        icon.style.display = 'none';
+      }
+
+      document.addEventListener("click", (e) => {
+        if (!noteBox.contains(e.target) && e.target !== icon) {
+          hideNote();
+        }
+      });
+
+      icon.addEventListener("click", showNote);
+
+      // Make icon draggable
+      let offsetX, offsetY, isDragging = false;
+
+      icon.addEventListener("mousedown", (e) => {
+        isDragging = true;
+        offsetX = e.clientX - icon.offsetLeft;
+        offsetY = e.clientY - icon.offsetTop;
+        e.preventDefault();
+      });
+
+      document.addEventListener("mousemove", (e) => {
+        if (isDragging) {
+          icon.style.left = `${e.clientX - offsetX}px`;
+          icon.style.top = `${e.clientY - offsetY}px`;
+        }
+      });
+
+      document.addEventListener("mouseup", () => {
+        isDragging = false;
+      });
+    }
+
+    function clearAll() {
+      document.querySelectorAll(".highlight").forEach(el => {
+        const textNode = document.createTextNode(el.textContent);
+        el.replaceWith(textNode);
+      });
+
+      document.querySelectorAll(".note-box, .note-icon").forEach(el => el.remove());
+      document.getElementById("toolbar").style.display = 'none';
+    }
+    function submitToSheet() {
+  const correctAnswers = {
+    q1: "True", q2: "False", q3: "False", q4: "False", q5: "True", q6: "Not Given",
+    a: "True", b: "Not Given", c: "Not Given", d: "False", e: "True", f: "False", g: "True", h: "True"
+  };
+
+  let score = 0;
+
+  const name = document.getElementById('studentName').value.trim();
+  const classCode = document.getElementById('classCode').value.trim();
+
+  if (!name || !classCode) {
+    alert("❗ Please enter both your name and class code.");
+    return;
+  }
+
+  const data = {
+    name: name,
+    classCode: classCode
+  };
+
+  for (let id in correctAnswers) {
+    const selected = document.getElementById(id)?.value;
+    data[id] = selected || "";
+    if (selected === correctAnswers[id]) score++;
+  }
+
+  data.score = score;
+
+  fetch('https://script.google.com/macros/s/AKfycbz7xGnxI42KG4FpbHzvLTfLHl3H531XP6ZzcpC3N7IyCFCs4A9GGUnxmJUjIjD7Bs4s/exec', {
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers: { 'Content-Type': 'application/json' }
+  })
+  .then(res => res.text())
+  .then(txt => {
+    document.getElementById('score').innerText = `✅ Submitted successfully! Your score: ${score}/14`;
+    document.getElementById('score').style.color = 'limegreen';
+  })
+  .catch(err => {
+    const errorMessage = `❌ Submission failed. Error: ${err.message || err}`;
+    document.getElementById('score').innerText = errorMessage;
+    document.getElementById('score').style.color = 'red';
+  });
+}
+
+
+  </script>
+
+</body>
+</html>
